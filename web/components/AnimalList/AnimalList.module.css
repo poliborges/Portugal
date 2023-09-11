@@ -1,0 +1,21 @@
+.card {
+    
+    background-color: green;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.list {
+    display: flex;
+    gap: 10px;
+}
+.text {
+    background-color: pink;
+}
