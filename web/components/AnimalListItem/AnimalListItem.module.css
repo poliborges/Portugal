@@ -1,0 +1,39 @@
+.title {
+  color: black;
+  font-size: 20px;
+  display: flex;
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.subtitle {
+  color: gray;
+  display: flex;
+  text-wrap: wrap;
+  word-break: break-word;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-width: 200px;
+  max-width: 300px;
+  box-sizing: border-box;
+  transition: all 0.3s ease; /* Optional: for smoother resizing */
+}
+
+.img {
+  border-radius: 20px;
+}
+
+.detailsContainer {
+  padding: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}

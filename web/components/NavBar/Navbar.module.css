@@ -1,0 +1,26 @@
+.navbar {
+  background-color: #fff;
+  width: 100%;
+  height: 80px;
+  flex-shrink: 0;
+}
+.title {
+}
+.navbarbuttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 15px;
+  padding: 20px;
+}
+.buttonsubmit {
+  display: flex;
+  width: 164px;
+  padding: 12px 28px;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 1px solid #256fff;
+  color: #256fff;
+}
