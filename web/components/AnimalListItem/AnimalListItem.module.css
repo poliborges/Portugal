@@ -16,13 +16,12 @@
 .card {
   background-color: white;
   border-radius: 20px;
-  padding: 20px;
+  padding: var(--spacing-normal);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   min-width: 200px;
-  max-width: 300px;
+  max-width: 440px;
   box-sizing: border-box;
   transition: all 0.3s ease; /* Optional: for smoother resizing */
 }
@@ -32,7 +31,7 @@
 }
 
 .detailsContainer {
-  padding: 10px;
+  padding: var(--spacing-small);
   display: flex;
   flex: 1;
   flex-direction: column;

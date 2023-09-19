@@ -2,25 +2,69 @@
   background-color: #fff;
   width: 100%;
   height: 80px;
-  flex-shrink: 0;
-}
-.title {
-}
-.navbarbuttons {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: end;
-  gap: 15px;
-  padding: 20px;
+  padding: var(--spacing-medium);
+  gap: var(--spacing-huge);
 }
-.buttonsubmit {
+/* @media (max-width: 500px) {
+  .navbar {
+    justify-content: start;
+  }
+} */
+
+.logo {
+  width: 60px;
+}
+
+.searchbar {
   display: flex;
-  width: 164px;
-  padding: 12px 28px;
-  gap: 8px;
-  flex-shrink: 0;
-  border-radius: 12px;
-  border: 1px solid #256fff;
-  color: #256fff;
+  align-items: center;
+  border: solid 1px #fec683;
+  border-radius: 10px;
+  padding: var(--spacing-small) var(--spacing-normal);
+  flex: 1;
+}
+
+.inputsearch {
+  margin-right: var(--spacing-smaller);
+  flex: 1;
+  text-decoration: none;
+  outline: none;
+}
+@media (max-width: 500px) {
+  .inputsearch {
+    display: none;
+  }
+}
+
+.addbutton {
+  font-size: 16px;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: none;
+  background-color: #fec683;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  cursor: pointer;
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .addbutton {
+    font-size: 14px;
+    padding: var(--spacing-smaller) var(--spacing-normal);
+    display: none;
+  }
+}
+
+.plusbutton {
+  display: none;
+}
+@media (max-width: 500px) {
+  .plusbutton {
+    display: flex;
+    width: 30px;
+  }
 }
