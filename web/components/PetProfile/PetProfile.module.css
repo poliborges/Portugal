@@ -1,0 +1,26 @@
+.img {
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+}
+.title {
+  color: black;
+  font-size: 20px;
+  display: flex;
+  font-weight: bold;
+  word-break: break-word;
+  flex-wrap: wrap;
+}
+.subtitle {
+  color: black;
+  display: flex;
+  text-wrap: wrap;
+  word-break: break-word;
+  max-width: 400px;
+  text-align: center;
+}
+.test {
+  max-width: 768px;
+  flex: 1;
+  padding: 50px;
+}

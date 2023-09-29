@@ -3,7 +3,12 @@ import React from "react";
 import styles from "./Button.module.css";
 import { stat } from "fs/promises";
 
-export const Button = (props: any) => {
+interface ButtonProps {
+  title: string;
+  onClick: () => void;
+}
+
+export const Button = (props: ButtonProps) => {
   //como colocar o style abaixo? se ao lado da tag ja tem o evento do onclick?
 
   const navigate = () => {
@@ -11,7 +16,7 @@ export const Button = (props: any) => {
   };
 
   return (
-    <button className={styles.button} onClick={navigate}>
+    <button className={styles.button} onClick={props.onClick}>
       {props.title}
     </button>
   );

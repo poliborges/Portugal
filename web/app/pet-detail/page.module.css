@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.location {
+  height: 200px;
+  width: 100%;
+}
+
+.information {
+  gap: 10px;
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  border: solid 1px green;
+  padding: var(--spacing-normal);
+}

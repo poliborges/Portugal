@@ -6,16 +6,7 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-medium);
-  gap: var(--spacing-huge);
-}
-/* @media (max-width: 500px) {
-  .navbar {
-    justify-content: start;
-  }
-} */
-
-.logo {
-  width: 60px;
+  gap: var(--spacing-small);
 }
 
 .searchbar {
@@ -29,32 +20,21 @@
 
 .inputsearch {
   margin-right: var(--spacing-smaller);
-  flex: 1;
+  width: 100%;
   text-decoration: none;
   outline: none;
 }
-@media (max-width: 500px) {
-  .inputsearch {
-    display: none;
-  }
-}
 
 .addbutton {
-  font-size: 16px;
-  padding: var(--spacing-small) var(--spacing-medium);
-  border: none;
-  background-color: #fec683;
+  background: #fec683;
   color: #fff;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
+  padding: var(--spacing-small);
+  border: none;
+  border-radius: 20px;
   cursor: pointer;
-  border-radius: 10px;
 }
 @media (max-width: 500px) {
   .addbutton {
-    font-size: 14px;
-    padding: var(--spacing-smaller) var(--spacing-normal);
     display: none;
   }
 }
@@ -65,6 +45,5 @@
 @media (max-width: 500px) {
   .plusbutton {
     display: flex;
-    width: 30px;
   }
 }

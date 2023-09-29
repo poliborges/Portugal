@@ -5,12 +5,7 @@ import styles from "./Navbar.module.css";
 import LogoCat from "../../app/assets/LogoCat.png";
 
 const Logo = () => (
-  <img
-    className={styles.logo}
-    src={LogoCat.src}
-    alt="logo gato"
-    title="logo do gato"
-  />
+  <img src={LogoCat.src} alt="logo gato" title="logo do gato" width={40} />
 );
 
 const SearchBar = (props: any) => (
@@ -24,20 +19,19 @@ const SearchBar = (props: any) => (
   </div>
 );
 
-const PlusButton = (props: any) => <div className={props.className}></div>;
-
 export const NavBar = () => {
   return (
-    <nav className={styles.navbar}>
+    <div className={styles.navbar}>
       <Logo />
+
       <SearchBar className={styles.searchbar} />
+
+      <div className={styles.addbutton}>Adicionar</div>
+      {/* nao deu certo colocar o comp button */}
+
       <div className={styles.plusbutton}>
         <FaPlus />
       </div>
-
-      <ul className={styles.navbuttons}>
-        <li className={styles.addbutton}>Adicionar</li>
-      </ul>
-    </nav>
+    </div>
   );
 };
