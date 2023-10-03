@@ -10,11 +10,17 @@ export const AnimalList = () => {
   const [listOfPets, setListOfPets] = useState<PetResult[]>([]);
 
   useEffect(() => {
-    const atualizarListaDeCats = async () => {
-      const list = await getPets();
-      list && setListOfPets(list);
-    };
-    atualizarListaDeCats();
+    getPets().then((pets) => {
+      if (pets !== undefined) {
+        setListOfPets(pets);
+      }
+    });
+
+    // const atualizarListaDeCats = async () => {
+    //   const list = await getPets();
+    //   list && setListOfPets(list);
+    // };
+    // atualizarListaDeCats();
   }, []);
 
   return (
@@ -24,6 +30,7 @@ export const AnimalList = () => {
           title={pet.name}
           img={pet.image}
           subtitle={pet.description}
+          id={pet.id}
         />
       ))}
     </div>

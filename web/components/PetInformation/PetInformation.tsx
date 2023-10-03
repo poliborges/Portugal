@@ -8,7 +8,7 @@ export const PetInformation = () => {
       <h1 className={styles.title}>Informações</h1>
 
       <div className={styles.container}>
-        <label htmlFor="nome">{}</label>
+        <label htmlFor="nome">Nome</label>
         <input type="text" />
       </div>
 
@@ -18,13 +18,8 @@ export const PetInformation = () => {
       </div>
 
       <div className={styles.container}>
-        <label htmlFor="Cor">Cor</label>
-        <input type="text" placeholder="" id="Cor" />
-      </div>
-
-      <div className={styles.container}>
         <label htmlFor="Peso">Peso</label>
-        <input type="text" placeholder="" id="Peso" />
+        <input type="text" placeholder="" id="Cor" />
       </div>
     </Container>
   );
