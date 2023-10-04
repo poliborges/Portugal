@@ -36,6 +36,7 @@ export default function Page({ params }: { params: PetDetailProps }) {
       <div className={styles.content}>
         <div className={styles.wrapper}>
           <PetProfile
+            image={petDetails.image}
             title={petDetails.name}
             subtitle={petDetails.description}
           />
@@ -43,7 +44,11 @@ export default function Page({ params }: { params: PetDetailProps }) {
             <PetLocation />
           </div>
           <div className={styles.information}>
-            <PetInformation />
+            <PetInformation
+              name={petDetails.name}
+              breed={petDetails.breed}
+              weight={petDetails.weight}
+            />
           </div>
         </div>
       </div>

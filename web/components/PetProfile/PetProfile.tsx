@@ -4,12 +4,12 @@ import { Container } from "../Container/Container";
 
 export const PetProfile = (props: any) => {
   return (
-    <Container className={styles.test}>
+    <Container>
       <img
         className={styles.img}
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Gato_%282%29_REFON.jpg/1200px-Gato_%282%29_REFON.jpg"
+        src={props.image}
         alt=""
-        height={100} //??
+        height={100}
         width={100}
       />
       <h1 className={styles.title}>{props.title}</h1>
