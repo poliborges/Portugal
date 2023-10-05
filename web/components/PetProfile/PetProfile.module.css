@@ -1,3 +1,9 @@
+.content {
+  max-width: 768px;
+  flex: 1;
+  padding: 20px;
+}
+
 .img {
   border-radius: 50px;
   height: 100px;

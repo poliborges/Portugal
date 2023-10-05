@@ -16,6 +16,13 @@ export default function Page({ params }: { params: PetDetailProps }) {
 
   console.log(params.id);
 
+  // const novoPet = {
+  //   ...petDetails,
+  //   name: "novoNome",
+  // }
+
+  // setPetDetails(novoPet)
+
   useEffect(() => {
     const fetchPetDetails = async () => {
       const petResult = await getPetDetails(params.id);
@@ -32,25 +39,31 @@ export default function Page({ params }: { params: PetDetailProps }) {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        <div className={styles.wrapper}>
-          <PetProfile
-            image={petDetails.image}
-            title={petDetails.name}
-            subtitle={petDetails.description}
-          />
-          <div className={styles.location}>
-            <PetLocation />
-          </div>
-          <div className={styles.information}>
-            <PetInformation
-              name={petDetails.name}
-              breed={petDetails.breed}
-              weight={petDetails.weight}
-            />
-          </div>
+    <div className={styles.content}>
+      <div className={styles.wrapper}>
+        <PetProfile
+          image={petDetails.image}
+          title={petDetails.name}
+          subtitle={petDetails.description}
+        />
+        <div className={styles.location}>
+          <PetLocation />
         </div>
+
+        <PetInformation
+          name={petDetails.name}
+          breed={petDetails.breed}
+          weight={petDetails.weight}
+          onNameChange={(name: string) =>
+            setPetDetails({ ...petDetails, name })
+          }
+          onBreedChange={(breed: string) =>
+            setPetDetails({ ...petDetails, breed })
+          }
+          onWeightChange={(weight: string) =>
+            setPetDetails({ ...petDetails, weight })
+          }
+        />
       </div>
     </div>
   );

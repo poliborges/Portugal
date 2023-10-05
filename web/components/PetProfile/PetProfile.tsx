@@ -4,7 +4,7 @@ import { Container } from "../Container/Container";
 
 export const PetProfile = (props: any) => {
   return (
-    <Container>
+    <Container className={styles.content}>
       <img
         className={styles.img}
         src={props.image}
