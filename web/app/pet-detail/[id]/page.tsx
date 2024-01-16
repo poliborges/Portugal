@@ -5,7 +5,14 @@ import { PetLocation } from "@/components/PetLocation/PetLocation";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import { PetResult } from "@/api/api.props";
-import { getPetDetails } from "@/api/api";
+import { deletePet, getPetDetails, updatePet } from "@/api/api";
+import { Button } from "../../../components/Button/Button";
+import { useRouter } from "next/navigation";
+
+interface updatePetProps {
+  pet: PetResult;
+  id: number;
+}
 
 interface PetDetailProps {
   id: number;
@@ -26,7 +33,22 @@ export default function Page({ params }: { params: PetDetailProps }) {
   useEffect(() => {
     const fetchPetDetails = async () => {
       const petResult = await getPetDetails(params.id);
-      petResult && setPetDetails(petResult);
+
+      // petResult n é nulo
+
+      // if (petResult !== null) {
+      //   setPetDetails(petResult)
+      // }
+
+      // if (!(petResult === null)) {
+
+      // }
+
+      if (petResult) {
+        setPetDetails(petResult);
+      }
+
+      // petResult && setPetDetails(petResult);
     };
 
     fetchPetDetails();
@@ -51,6 +73,15 @@ export default function Page({ params }: { params: PetDetailProps }) {
         </div>
 
         <PetInformation
+          onSaveClick={() => {
+            updatePet(petDetails, petDetails.id);
+            alert("Salvei o Pet");
+          }}
+          onDeleteClick={() => {
+            deletePet(petDetails.id);
+            alert("deletado");
+            // navegação
+          }}
           name={petDetails.name}
           breed={petDetails.breed}
           weight={petDetails.weight}

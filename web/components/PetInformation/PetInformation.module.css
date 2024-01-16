@@ -46,3 +46,18 @@
 .container + .container {
   margin-top: 10px;
 }
+.contentbutton {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.button {
+  width: 180px;
+}
+
+.buttondelete {
+  width: 180px;
+}
